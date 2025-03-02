@@ -8,7 +8,7 @@ import Notification from "./components/Notification/Notification";
 const App = () => {
   const loadFeedback = () => {
     const savedFeedback = JSON.parse(localStorage.getItem("feedback"));
-    return savedFeedback || {}; 
+    return savedFeedback || { good: 0, neutral: 0, bad: 0 };
   };
 
   const [feedback, setFeedback] = useState(loadFeedback);
